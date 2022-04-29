@@ -1,11 +1,19 @@
-const transcripts = require('./transcripts')
+const transcripts = require('./transcripts');
+let sentenceInt = [];
+let newSentenceIntArray = [];
 
 class GenerateNewText {
     constructor() {
         this.sentences = transcripts;
+        for(let i = 0; i < this.sentences.length; i++){
+            sentenceInt.push(i)
+        }
+        newSentenceIntArray = shuffleSentenceIntArray(sentenceInt); 
     }
     getRandomSentence() {
-        let randomSentence = this.sentences[Math.floor(Math.random() * this.sentences.length)]
+        let firstNewSentenceIntArrayIndex = newSentenceIntArray.shift();
+        console.log(firstNewSentenceIntArrayIndex)
+        let randomSentence = this.sentences[firstNewSentenceIntArrayIndex];
 	    return randomSentence;
     }
     getParagraph() {
@@ -29,10 +37,21 @@ class GenerateNewText {
         }
         let paragraphHTML = "";
         allParagraphs.forEach(function (paragraph) {
-            paragraphHTML += "<h3>" + paragraph + "</h3>";
+            paragraphHTML += "<p>" + paragraph + "</p>";
         });
         return paragraphHTML;
     }
+}
+
+function shuffleSentenceIntArray(array){
+    let currentIndex = array.length, randomIndex;
+    while (currentIndex !=0){
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex --;
+
+        [array[currentIndex], array[randomIndex]] = [array[randomIndex], array[currentIndex]];
+    }
+    return array;
 }
 
 const loremIpsum = new GenerateNewText();
