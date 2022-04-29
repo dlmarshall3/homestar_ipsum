@@ -1,19 +1,11 @@
 const transcripts = require('./transcripts');
-let sentenceInt = [];
-let newSentenceIntArray = [];
 
 class GenerateNewText {
     constructor() {
         this.sentences = transcripts;
-        for(let i = 0; i < this.sentences.length; i++){
-            sentenceInt.push(i)
-        }
-        newSentenceIntArray = shuffleSentenceIntArray(sentenceInt); 
     }
     getRandomSentence() {
-        let firstNewSentenceIntArrayIndex = newSentenceIntArray.shift();
-        console.log(firstNewSentenceIntArrayIndex)
-        let randomSentence = this.sentences[firstNewSentenceIntArrayIndex];
+        let randomSentence = this.sentences[Math.floor(Math.random() * this.sentences.length)]
 	    return randomSentence;
     }
     getParagraph() {
