@@ -5,8 +5,8 @@ class GenerateNewText {
         this.sentences = transcripts;
     }
     getRandomSentence() {
-        let randomSentence = this.sentences[Math.floor(Math.random() * this.sentences.length)];
-        console.log(this.sentences.length)
+        let arrInt = Math.floor(Math.random() * this.sentences.length)+1;
+        let randomSentence = this.sentences[arrInt];
 	    return randomSentence;
     }
     getParagraph() {
@@ -32,6 +32,7 @@ class GenerateNewText {
         allParagraphs.forEach(function (paragraph) {
             paragraphHTML += "<p>" + paragraph + "</p>";
         });
+        console.log(this.sentences.length)
         return paragraphHTML;
     }
 }
