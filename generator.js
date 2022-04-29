@@ -5,7 +5,8 @@ class GenerateNewText {
         this.sentences = transcripts;
     }
     getRandomSentence() {
-        let randomSentence = this.sentences[Math.floor(Math.random() * this.sentences.length)]
+        let randomSentence = this.sentences[Math.floor(Math.random() * this.sentences.length)];
+        console.log(this.sentences.length)
 	    return randomSentence;
     }
     getParagraph() {

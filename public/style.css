@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Bauhaus 93';
+    src: url('Bauhaus\ 93\ Regular.ttf');
+    font-family: 'Perfect DOS VGA 437';
+    src: url('Perfect\ DOS\ VGA\ 437\ Win.ttf');
+}
+
+
+
+h1 {
+    font-family: 'Bauhaus 93';
+}
+
+h3, h5, p {
+    font-family: 'Perfect DOS VGA 437';
+}
+
+.masterDiv{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
+    width: 75%;
+}
+
+.row-padding-h1 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.row-padding {
+    padding-bottom: 2rem;
+}
+
+.ipsum_form {
+    display: inline-block;
+    vertical-align: middle;
+}
