@@ -5,7 +5,9 @@
     src: url('Perfect\ DOS\ VGA\ 437\ Win.ttf');
 }
 
-
+.logo {
+    width: 50%;
+}
 
 h1 {
     font-family: 'Bauhaus 93';
