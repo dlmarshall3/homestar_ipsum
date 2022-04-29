@@ -4,7 +4,7 @@ const app = express();
 const routes = require('./router');
 
 const hostname = "127.0.0.1";
-const port = 3000;
+const port = 5000;
 
 app.use(express.static('public'));
 
