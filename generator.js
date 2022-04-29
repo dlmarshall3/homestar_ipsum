@@ -10,7 +10,7 @@ class GenerateNewText {
     }
     getParagraph() {
         let paragraph = "";
-        let minimumCharacterLength = 500;
+        let minimumCharacterLength = 300;
         let firstSentence = true;
         while (paragraph.length < minimumCharacterLength) {
             if (firstSentence) {
