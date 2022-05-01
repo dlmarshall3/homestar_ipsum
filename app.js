@@ -11,5 +11,5 @@ app.use(express.static('public'));
 app.use(routes);
 
 app.listen(port, () => {
-    console.log('Server is listening at...')
+    console.log('The system is NOT down.')
 })
