@@ -1,4 +1,4 @@
-const loremIpsum = require('./generator.js');
+const homestarIpsum = require('./generator.js');
 const querystring = require('querystring');
 const fs = require('fs');
 
@@ -16,9 +16,9 @@ router.post('/', (request, response) => {
     request.on('data', function(inputValue){
         let query = inputValue.toString();
         let numberOfParagraphs = querystring.parse(query).numberOfParagraphs;
-        let loremIpsumText = loremIpsum.getAllParagraphs(numberOfParagraphs);
+        let homestarIpsumText = homestarIpsum.getAllParagraphs(numberOfParagraphs);
         let fileContents = fs.readFileSync('./public/index.html', {encoding: 'utf8'});
-        fileContents = fileContents.replace('<div class="placeholder-div"></div>', loremIpsumText);
+        fileContents = fileContents.replace('<div class="placeholder-div"></div>', homestarIpsumText);
         response.setHeader('content-type', 'text/html');
         response.write(fileContents);
         response.end();

@@ -48,6 +48,6 @@ class GenerateNewText {
 //     return array;
 // }
 
-const loremIpsum = new GenerateNewText();
+const homestarIpsum = new GenerateNewText();
 
-module.exports = loremIpsum;
+module.exports = homestarIpsum;
