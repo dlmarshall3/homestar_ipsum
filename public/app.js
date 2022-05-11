@@ -3,6 +3,8 @@ let shareButton = document.querySelector('#share-button')
 console.log(shareButton)
 
 const shareData = {
+    title: 'Homestar',
+    text: 'Stuff',
     url: 'http://homestar-ipsum.herokuapp.com'
 }
 
