@@ -2,15 +2,19 @@ let shareButton = document.querySelector('#share-button')
 
 console.log(shareButton)
 
-shareButton.addEventListener('click', function() {
+const shareData = {
+    url: 'http://homestar-ipsum.herokuapp.com'
+}
+
+shareButton.addEventListener('click', async() => {
     if(navigator.share){
-        navigator.share({
-            url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
-        }).then(()=>{
-            console.log('Thanks for sharing!')
-        })
-        .catch(console.error)
+        try {
+            await navigator.share(shareData)
+            console.log('shared!')
+    } catch (error){
+        console.log('error')
+    }
     } else {
-        console.log('fail')
+        console.log('whatefer')
     }
 })
