@@ -8,11 +8,10 @@ const shareData = {
 
 
   // Share must be triggered by "user activation"
-  shareButton.addEventListener('click', async () => {
+  shareButton.addEventListener('click', function() {
     try {
-      await navigator.share(shareData)
+      navigator.share(shareData)
     } catch(err) {
         window.location = 'http://www.google.com'
-      resultPara.textContent = 'Error: ' + err
     }
   });
