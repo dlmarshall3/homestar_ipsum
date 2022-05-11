@@ -1,22 +1,19 @@
 let shareButton = document.querySelector('#share-button')
 
-console.log(shareButton)
-
 const shareData = {
-    title: 'Homestar',
-    text: 'Stuff',
-    url: 'http://homestar-ipsum.herokuapp.com'
-}
+    title: 'MDN',
+    text: 'Learn web development on MDN!',
+    url: 'https://developer.mozilla.org'
+  }
 
-shareButton.addEventListener('click', async() => {
-    if(navigator.share){
-        try {
-            await navigator.share(shareData)
-            console.log('shared!')
-    } catch (error){
-        console.log('error')
+
+  // Share must be triggered by "user activation"
+  shareButton.addEventListener('click', async () => {
+    try {
+      await navigator.share(shareData)
+      resultPara.textContent = 'MDN shared successfully'
+    } catch(err) {
+        window.location = 'http://www.google.com'
+      resultPara.textContent = 'Error: ' + err
     }
-    } else {
-        console.log('whatefer')
-    }
-})
+  });
