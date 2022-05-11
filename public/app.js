@@ -11,7 +11,6 @@ const shareData = {
   shareButton.addEventListener('click', async () => {
     try {
       await navigator.share(shareData)
-      resultPara.textContent = 'MDN shared successfully'
     } catch(err) {
         window.location = 'http://www.google.com'
       resultPara.textContent = 'Error: ' + err
