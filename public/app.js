@@ -1,0 +1,17 @@
+let shareButton = document.querySelector('#logo')
+
+console.log(shareButton)
+
+shareButton.addEventListener('click', function() {
+    if(navigator.share){
+        navigator.share({
+            title: 'Webshare API Demo',
+            url: 'https://codepen.io/ayoisaiah/pen/YbNazJ'
+        }).then(()=>{
+            console.log('Thanks for sharing!')
+        })
+        .catch(console.error)
+    } else {
+        console.log('fail')
+    }
+})
