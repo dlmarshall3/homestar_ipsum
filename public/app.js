@@ -1,4 +1,4 @@
-let shareButton = document.querySelector('#logo')
+let shareButton = document.querySelector('#share-button')
 
 console.log(shareButton)
 
