@@ -25,6 +25,10 @@ h3, h5, p {
     text-align: justify;
 }
 
+#generated-text {
+    text-align: justify;
+}
+
 .masterDiv{
     position: absolute;
     top: 0;
